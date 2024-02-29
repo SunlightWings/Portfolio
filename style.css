@@ -1,0 +1,218 @@
+/* Import fonts */
+@import url("https://use.typekit.net/jmk3xov.css");
+
+/* Global styles */
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.6);
+  --spacing: 200px;
+  font-family: 'Brush Script MT', cursive; /* Updated font family */
+  font-weight: 600;
+  font-style: italic;
+  font-size: 25px;
+}
+
+/* Canvas */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Main container */
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Headings and blockquote */
+h1, h2, h3, blockquote {
+  font-family: 'Brush Script MT', cursive; /* Updated font family */
+  font-weight: 700;
+  font-style: italic;
+  font-size: 30px;
+}
+
+/* Header */
+header {
+  background: rgba(15, 15, 15, 0.1); 
+  grid-column: 2 / span 5;
+  font-size: 2rem;
+  padding: 2rem;
+  margin-bottom: var(--spacing);
+  font-size: 35px;
+}
+
+/* Content sections */
+section {
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: rgba(15, 15, 15, 0.1); 
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+/* Animate letters in the first section */
+section:first-of-type h2 span {
+  animation: animateLetters 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes animateLetters {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Blockquote */
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
+}
+
+blockquote p {
+  color: black;
+  background-color: rgb(255, 220, 200);
+  font-size: 3rem;
+  display: inline;
+  line-height: 1;
+}
+
+/* Left-aligned content */
+.left {
+  grid-column: 6 / 12;
+}
+
+/* PSP photo */
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 140px; /* Adjust width as needed */
+  height: auto;
+  margin-left: 10px; /* Adjust margin as needed */
+}
+
+/* Contact section */
+#contacts {
+  background: rgba(15, 15, 15, 0.4); 
+  padding: 3rem 0;
+}
+
+.contact-text {
+  text-align: center;
+}
+
+.contact-text h2 {
+  margin-top: 0.8rem;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  margin-bottom: 1.5rem;
+  width: 300px;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  /* background-color: #65b2c6; */
+  background: rgba(15, 15, 15, 0.1); 
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #4b9a9a;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 80%;
+  }
+}
+
+.email {
+  justify-content: center;
+  width: 90%;
+  background: rgba(15, 15, 15, 0.1); 
+  display: flex;
+  align-items: center;
+}
+
+form {
+  background: rgba(15, 15, 15, 0.1); 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 70%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+form h3 {
+  color: #08304b;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  margin: 10px 0;
+  padding: 20px;
+  color: rgb(240, 250, 255);
+  border-width: 2px;
+  border-color: rgb(0, 255, 42);
+  border-radius: 10px;
+  background: rgba(15, 15, 15, 0.1); 
+  font-size: 16px;
+}
+
+form button {
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  border-color: rgb(60, 255, 0);
+  border-width: 2px;
+  background: rgba(15, 15, 15, 0.1); 
+  transition: all 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+form button:hover {
+  color: rgb(255, 255, 255); /* Bright white text on hover */
+  box-shadow: 0 5px 12px rgba(145, 92, 182, 0.4); /* Glowing effect */
+}
